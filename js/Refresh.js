@@ -1,0 +1,1 @@
+BDBridge.handleRefresh({"bid ":"39a712f94ce2c05c8027aa27","status":0,"subid":0,"saved":1});

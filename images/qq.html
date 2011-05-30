@@ -1,0 +1,92 @@
+if (!document.layers)
+	document.write('<div id="divStayTopLeft" style="position:absolute">');
+	document.write('<layer id="divStayTopLeft">');
+	document.write('<table id="showtb" style="display:none"><tr><td onclick="if(document.all.qqtab.style.display==\'none\'){document.all.qqtab.style.display=\'\';document.all.showtb.style.display=\'none\'} else {document.all.qqtab.style.display=\'none\';document.all.showtb.style.display=\'\'}"><img src="http://www.xuanhao.net/qq_img/kefu_show.gif"  border="0"/></td></tr></table>');
+	document.write('<table cellSpacing="0" cellPadding="0" width="110" border="0" id="qqtab"  style="display:">');
+	document.write('    <tr>');
+	document.write('      <td width="110"><img src="http://www.xuanhao.net/qq_img/kefu_top.gif" border="0"></td><td onclick="if(document.all.qqtab.style.display==\'none\'){document.all.qqtab.style.display=\'\';document.all.showtb.style.display=\'none\'} else {document.all.qqtab.style.display=\'none\';document.all.showtb.style.display=\'\'}"><img src="http://www.xuanhao.net/qq_img/kefu_close.gif"  border="0"/></td>');
+	document.write('</tr>');
+	document.write('<tr>');
+	document.write('<td>');		
+	document.write('<table border="0" width="110" cellspacing="0" cellpadding="0">');
+	document.write('<tr><td width="110"><img border=0 src=http://www.xuanhao.net/qq_img/kefu_middle.gif></td></tr>');		
+	
+if (online[0]==0) {
+	document.write('<tr><td valign=middle height=23 background=http://www.xuanhao.net/qq_img/kefu_middle.gif>');		
+	document.write("&nbsp;&nbsp;<a target=blank href=tencent://message/?uin=7358973&Site=&Menu=yes><img src='http://www.xuanhao.net/qq_img/kefu_qq_off.gif' border=0 align=center>ºÅÂë×ÉÑ¯</a>");
+	document.write('</td></tr>');	
+} 
+else {
+	document.write('<tr><td valign=middle height=23 background=http://www.xuanhao.net/qq_img/kefu_middle.gif>');		
+	document.write("&nbsp;&nbsp;<a target=blank href=tencent://message/?uin=7358973&Site=&Menu=yes><img src='http://www.xuanhao.net/qq_img/kefu_qq_on.gif' border=0 align=center>ºÅÂë×ÉÑ¯</a>");
+	document.write('</td></tr>');	
+}
+
+if (online[1]==0) {
+	document.write('<tr><td valign=middle height=23 background=http://www.xuanhao.net/qq_img/kefu_middle.gif>');		
+	document.write("&nbsp;&nbsp;<a target=blank href=tencent://message/?uin=9763705&Site=&Menu=yes><img src='http://www.xuanhao.net/qq_img/kefu_qq_off.gif' border=0 align=center>ºÅÂë×ÉÑ¯</a>");
+	document.write('</td></tr>');	
+} 
+else {
+	document.write('<tr><td valign=middle height=23 background=http://www.xuanhao.net/qq_img/kefu_middle.gif>');		
+	document.write("&nbsp;&nbsp;<a target=blank href=tencent://message/?uin=9763705&Site=&Menu=yes><img src='http://www.xuanhao.net/qq_img/kefu_qq_on.gif' border=0 align=center>ºÅÂë×ÉÑ¯</a>");
+	document.write('</td></tr>');	
+}
+
+if (online[2]==0) {
+	document.write('<tr><td valign=middle height=23 background=http://www.xuanhao.net/qq_img/kefu_middle.gif>');		
+	document.write("&nbsp;&nbsp;<a target=blank href=tencent://message/?uin=19981966&Site=&Menu=yes><img src='http://www.xuanhao.net/qq_img/kefu_qq_off.gif' border=0 align=center>3GÉÏÍø¿¨</a>");
+	document.write('</td></tr>');	
+} 
+else {
+	document.write('<tr><td valign=middle height=23 background=http://www.xuanhao.net/qq_img/kefu_middle.gif>');		
+	document.write("&nbsp;&nbsp;<a target=blank href=tencent://message/?uin=19981966&Site=&Menu=yes><img src='http://www.xuanhao.net/qq_img/kefu_qq_on.gif' border=0 align=center>3GÉÏÍø¿¨</a>");
+	document.write('</td></tr>');	
+}
+							
+	document.write('<tr><td width="110"><img border=0 src=http://www.xuanhao.net/qq_img/kefu_bottom.gif></td></tr>');
+	document.write('</table>');
+	document.write('</td>');
+	document.write('</tr>');
+	document.write('</table>');
+
+var verticalpos="frombottom"
+if (!document.layers)
+document.write('</div>')
+function JSFX_FloatTopDiv()
+{
+ var startX =0,
+ startY = 150;
+ var ns = (navigator.appName.indexOf("Netscape") != -1);
+ var d = document;
+ function ml(id)
+ {
+  var el=d.getElementById?d.getElementById(id):d.all?d.all[id]:d.layers[id];
+  if(d.layers)el.style=el;
+  el.sP=function(x,y){this.style.left=x;this.style.top=y;};
+  el.x = startX;
+  if (verticalpos=="fromtop")
+  el.y = startY;
+  else{
+  el.y = ns ? pageYOffset + innerHeight : document.documentElement.scrollTop + document.documentElement.clientHeight;
+  el.y -= startY;
+  }
+  return el;
+ }
+ window.stayTopLeft=function()
+ {
+  if (verticalpos=="fromtop"){
+  var pY = ns ? pageYOffset : document.documentElement.scrollTop;
+  ftlObj.y += (pY + startY - ftlObj.y)/8;
+  }
+  else{
+  var pY = ns ? pageYOffset + innerHeight : document.documentElement.scrollTop + document.documentElement.clientHeight;
+  ftlObj.y += (pY - startY - ftlObj.y)/8;
+  }
+  ftlObj.sP(ftlObj.x, ftlObj.y);
+  setTimeout("stayTopLeft()", 10);
+ }
+ ftlObj = ml("divStayTopLeft");
+ stayTopLeft();
+}
+JSFX_FloatTopDiv();

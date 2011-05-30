@@ -1,0 +1,24 @@
+2011/05/10 02:51:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "post".' in /work/yii/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /work/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('')
+#1 /work/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /work/yii/demos/phonenumber/index.php(15): CApplication->run()
+#3 {main} REQUEST_URI=/demos/phonenumber/index.php?r=site/index
+2011/05/10 02:52:49 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "post".' in /work/yii/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /work/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('')
+#1 /work/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /work/yii/demos/phonenumber/index.php(15): CApplication->run()
+#3 {main} REQUEST_URI=/demos/phonenumber/index.php?r=site/index
+2011/05/10 02:52:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "post".' in /work/yii/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /work/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('')
+#1 /work/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /work/yii/demos/phonenumber/index.php(15): CApplication->run()
+#3 {main} REQUEST_URI=/demos/phonenumber/index.php?r=site/index
+2011/05/10 02:52:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "post".' in /work/yii/framework/web/CWebApplication.php:332
+Stack trace:
+#0 /work/yii/framework/web/CWebApplication.php(121): CWebApplication->runController('')
+#1 /work/yii/framework/base/CApplication.php(155): CWebApplication->processRequest()
+#2 /work/yii/demos/phonenumber/index.php(15): CApplication->run()
+#3 {main} REQUEST_URI=/demos/phonenumber/index.php?r=site/index
