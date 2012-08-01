@@ -1,3 +1,4 @@
+
 var BD_BRIDGE_OPEN = 1;
 var BD_BRIDGE_ROOT = "http://qiao.baidu.com/";
 var BD_BRIDGE_RCV_ROOT = "http://rqiao.baidu.com/";
